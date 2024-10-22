@@ -1,5 +1,7 @@
 # Simple LLM-based agent
 
+A simple LLM-based agent using Gemini running commands on a server exposed via FastAPI.
+
 [![Pylint Score](https://img.shields.io/badge/pylint-10-brightgreen.svg)](https://pylint.pycqa.org)
 
 <!-- [![Mypy Status](https://img.shields.io/badge/mypy-passed-brightgreen.svg)](http://mypy-lang.org) -->
@@ -27,8 +29,14 @@ To set up and run the server, you need the following:
    ```
 
 3. **Activate the virtual environment:**
+
    ```bash
    poetry shell
+   ```
+
+4. **Set up environment variable**
+   ```bash
+   export GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
    ```
 
 # Running the Server

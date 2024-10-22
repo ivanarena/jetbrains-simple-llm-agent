@@ -2,7 +2,6 @@
 Agent module for handling shell commands and interacting with Google Generative AI.
 """
 
-import os
 import asyncio
 from typing import Optional
 from pydantic import BaseModel, Field
@@ -64,7 +63,6 @@ async def run_command(command: str) -> CommandOutput:
 
 tools = [run_command]
 
-os.environ["GOOGLE_API_KEY"] = os.environ["GEMINI_API_KEY"]
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 llm_with_tools = llm.bind_tools(tools)
 
